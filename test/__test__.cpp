@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cassert>
-#include "./lib/CSVReader.hpp"
+#include "../lib/CSVReader.hpp"
 
 using namespace std;
 
 int main()
 {
     // Test constructor and read function
-    CSVReader reader("./data/test.csv");
+    CSVReader reader("./test/data/test.csv");
     bool success = reader.read();
     assert(success);
 
