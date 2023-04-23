@@ -1,4 +1,5 @@
-name,  Values
-hello1, 120
-hello2, 122
-hello3, 13
+A,B,C
+1,dog,2.0
+2,cat,3.0
+3,banana,4.0
+4, hello world,6.0
