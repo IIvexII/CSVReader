@@ -17,5 +17,5 @@ $(TARGET): $(TARGET).cpp
 clean:
 	$(RM) $(TARGET)
 
-run:
+check:
 	./$(TARGET)
