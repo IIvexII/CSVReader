@@ -1,4 +1,4 @@
-#include "CSVReader.hpp"
+#include "./lib/CSVReader.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
