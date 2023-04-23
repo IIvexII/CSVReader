@@ -7,7 +7,7 @@ CC = g++
 CFLAGS  = -g -Wall
  
 # The build target 
-TARGET = __test__
+TARGET = ./test/__test__
  
 all: $(TARGET)
  
@@ -18,4 +18,6 @@ clean:
 	$(RM) $(TARGET)
 
 check:
+	make
 	./$(TARGET)
+	make clean
