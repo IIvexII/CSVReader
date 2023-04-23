@@ -87,19 +87,18 @@ std::vector<std::vector<std::string>> CSVReader::getData() const
  */
 std::string CSVReader::strip(std::string str) const
 {
-    // traversing the string
-    for (int i = 0; i < str.length(); i++)
-    {
-        // look for space
-        if (str[i] == ' ')
-        {
-            // if space found, replace it with null
-            str.erase(str.begin() + i);
-            i--;
-        }
-    }
+    // Find the position of the first non-whitespace character
+    std::size_t first = str.find_first_not_of(" \t\n\r\f\v");
 
-    return str;
+    // If the string is all whitespace, return an empty string
+    if (first == std::string::npos)
+        return "";
+
+    // Find the position of the last non-whitespace character
+    std::size_t last = str.find_last_not_of(" \t\n\r\f\v");
+
+    // Extract the substring between the first and last non-whitespace characters
+    return str.substr(first, last - first + 1);
 }
 
 /**
